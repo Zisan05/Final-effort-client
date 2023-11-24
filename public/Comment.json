@@ -1,0 +1,188 @@
+[
+    {
+      "comment": "Great post! I learned a lot.",
+      "email": "john.doe@example.com",
+      "postTitle": "Exploring the wonders of JSON"
+    },
+    {
+      "comment": "Great post! I learned a lot.",
+      "email": "john.doe@example.com",
+      "postTitle": "Exploring the wonders of JSON"
+    },
+    {
+      "comment": "Great post! I learned a lot.",
+      "email": "john.doe@example.com",
+      "postTitle": "Exploring the wonders of JSON"
+    },
+    {
+      "comment": "I love your recipes! Can't wait to try them.",
+      "email": "jane.smith@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "I love your recipes! Can't wait to try them.",
+      "email": "jane.smith@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "I love your recipes! Can't wait to try them.",
+      "email": "jane.smith@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "I love your recipes! Can't wait to try them.",
+      "email": "jane.smith@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "I love your recipes! Can't wait to try them.",
+      "email": "jane.smith@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "Your photography skills are amazing!",
+      "email": "alex.johnson@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "I've read some of the hidden gems you mentioned. They're truly fantastic!",
+      "email": "emily.wilson@example.com",
+      "postTitle": "Travel Diaries: Adventures Across Continents"
+    },
+    {
+      "comment": "I've read some of the hidden gems you mentioned. They're truly fantastic!",
+      "email": "emily.wilson@example.com",
+      "postTitle": "Travel Diaries: Adventures Across Continents"
+    },
+    {
+      "comment": "I've read some of the hidden gems you mentioned. They're truly fantastic!",
+      "email": "emily.wilson@example.com",
+      "postTitle": "Travel Diaries: Adventures Across Continents"
+    },
+    {
+      "comment": "Your fitness tips are helping me stay on track. Thanks!",
+      "email": "michael.brown@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "I feel like I'm traveling with you. Your stories are captivating!",
+      "email": "sophie.davis@example.com",
+      "postTitle": "Cooking Adventures: A Culinary Journey"
+    },
+    {
+      "comment": "Fitness for a Healthy Lifestyle",
+      "email": "robert.miller@example.com",
+      "postTitle": "Artistic Expressions: Painting Beyond Boundaries"
+    },
+    {
+      "comment": "Your paintings are truly expressive. I love the freedom in your art.",
+      "email": "hannah.white@example.com",
+      "postTitle": "Cooking Adventures: A Culinary Journey"
+    },
+    {
+      "comment": "I'm fascinated by the mysteries of the universe. Your posts make it all more intriguing.",
+      "email": "david.turner@example.com",
+      "postTitle": "Science Unraveled: Exploring the Wonders of the Universe"
+    },
+    {
+      "comment": "Your fashion tips are helping me find my style. Thank you!",
+      "email": "lily.martinez@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+      "comment": "Your gaming articles are my go-to guide for choosing new games. Keep it up!",
+      "email": "samuel.taylor@example.com",
+      "postTitle": "Cooking Adventures: A Culinary Journey"
+    },
+    {
+      "comment": "Your mindfulness tips are making a positive impact on my life. Grateful for your insights.",
+      "email": "olivia.adams@example.com",
+      "postTitle": "The Art of Photography"
+    },
+    {
+        "comment": "Your gaming articles are my go-to guide for choosing new games. Keep it up!",
+        "email": "samuel.taylor@example.com",
+        "postTitle": "Cooking Adventures: A Culinary Journey"
+      },
+    {
+        "comment": "Your gaming articles are my go-to guide for choosing new games. Keep it up!",
+        "email": "samuel.taylor@example.com",
+        "postTitle": "Cooking Adventures: A Culinary Journey"
+      },
+      {
+        "comment": "Your gaming articles are my go-to guide for choosing new games. Keep it up!",
+        "email": "samuel.taylor@example.com",
+        "postTitle": "Cooking Adventures: A Culinary Journey"
+      },
+    {
+      "comment": "I'm inspired by your posts. Thanks for sharing your knowledge!",
+      "email": "inspired.reader@example.com",
+      "postTitle": "Science Unraveled: Exploring the Wonders of the Universe"
+    },
+    {
+      "comment": "I'm inspired by your posts. Thanks for sharing your knowledge!",
+      "email": "inspired.reader@example.com",
+      "postTitle": "Science Unraveled: Exploring the Wonders of the Universe"
+    },
+    {
+      "comment": "I can't get enough of your travel stories. They're like mini adventures!",
+      "email": "adventure.seeker@example.com",
+      "postTitle": "Fashion Forward: Trends and Style Tips"
+    },
+    {
+        "comment": "Your gaming articles are my go-to guide for choosing new games. Keep it up!",
+        "email": "samuel.taylor@example.com",
+        "postTitle": "Cooking Adventures: A Culinary Journey"
+      },
+    {
+      "comment": "Your coding tutorials are helping me improve my skills. Thank you!",
+      "email": "coding.enthusiast@example.com",
+      "postTitle": "Discovering Hidden Gems in Literature"
+    },
+    {
+      "comment": "Your photography journey inspires me to explore the world through my lens. Thank you!",
+      "email": "photography.lover@example.com",
+      "postTitle": "Exploring the wonders of JSON"
+    },
+    {
+      "comment": "Your literature recommendations are spot on. I've discovered some incredible books!",
+      "email": "bookworm@example.com",
+      "postTitle": "Discovering Hidden Gems in Literature"
+    },
+    {
+      "comment": "Your literature recommendations are spot on. I've discovered some incredible books!",
+      "email": "bookworm@example.com",
+      "postTitle": "Discovering Hidden Gems in Literature"
+    },
+    {
+      "comment": "Your literature recommendations are spot on. I've discovered some incredible books!",
+      "email": "bookworm@example.com",
+      "postTitle": "Discovering Hidden Gems in Literature"
+    },
+    {
+      "comment": "Your insights on healthy living are helping me make positive changes. Thank you!",
+      "email": "health.wellness@example.com",
+      "postTitle": "Exploring the wonders of JSON"
+    },
+    {
+      "comment": "I love your artistic approach to technology. It's a breath of fresh air!",
+      "email": "tech.artist@example.com",
+      "postTitle": "Discovering Hidden Gems in Literature"
+    },
+    {
+      "comment": "Your travel tips are making my vacation planning so much easier. Thanks!",
+      "email": "vacation.planner@example.com",
+      "postTitle": "Exploring the wonders of JSON"
+    },
+    {
+        "comment": "Your fashion tips are helping me find my style. Thank you!",
+        "email": "lily.martinez@example.com",
+        "postTitle": "The Art of Photography"
+      },
+      {
+        "comment": "Your fashion tips are helping me find my style. Thank you!",
+        "email": "lily.martinez@example.com",
+        "postTitle": "The Art of Photography"
+      }
+  ]
+  
