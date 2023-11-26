@@ -1,123 +1,134 @@
 [
-    {
-      "authorImage": "https://i.ibb.co/6DNhM3H/360-F-305776453-t7-SUl48g63z-Lsy-ODxd60aj6-Ec-WR9av-VK.jpg",
-      "authorName": "John Doe",
-      "postTitle": "Exploring the wonders of JSON",
-      "postDescription": "A deep dive into the world of JSON and its applications.",
-      "tag": "technology",
-      "postTime": "2023-11-24T12:30:00Z",
-      "upVoteCount": 150,
-      "downVoteCount": 20
-    },
-    {
-      "authorImage": "https://i.ibb.co/6JD2gqP/successful-businesswoman-positive-lady-smiling-260nw-1524541301.webp",
-      "authorName": "Jane Smith",
-      "postTitle": "Cooking Adventures: A Culinary Journey",
-      "postDescription": "Sharing my experiences and recipes from around the globe.",
-      "tag": "food",
-      "postTime": "2023-11-23T18:45:00Z",
-      "upVoteCount": 230,
-      "downVoteCount": 15
-    },
-    {
-      "authorImage": "https://i.ibb.co/3zTGWfN/360-F-285983167-OTSj-TSe-Rhq-J7b4-TPxl-Q80m-C9z-Ti-DCz-MQ.jpg",
-      "authorName": "Alex Johnson",
-      "postTitle": "The Art of Photography",
-      "postDescription": "Capturing moments through the lens and telling stories in every frame.",
-      "tag": "photography",
-      "postTime": "2023-11-22T09:15:00Z",
-      "upVoteCount": 120,
-      "downVoteCount": 5
-    },
-    {
-      "authorImage": "https://i.ibb.co/z4mzyB5/360-F-425659755-5-Ba-Ld-Nbb-Ct-Qbbiz1-JNFBikshfi-CWI5-NE.jpg",
-      "authorName": "Emily Wilson",
-      "postTitle": "Discovering Hidden Gems in Literature",
-      "postDescription": "Unveiling the beauty of lesser-known literary masterpieces.",
-      "tag": "food",
-      "postTime": "2023-11-21T15:20:00Z",
-      "upVoteCount": 180,
-      "downVoteCount": 10
-    },
-    {
-      "authorImage": "https://i.ibb.co/bd1Nbqd/360-F-200902415-G4e-Z9-Ok3-Ypd4-SZZKjc8nq-Jy-FVp1e-OD6-V.jpg",
-      "authorName": "Michael Brown",
-      "postTitle": "Fitness for a Healthy Lifestyle",
-      "postDescription": "Tips, tricks, and motivation for maintaining a fit and healthy life.",
-      "tag": "technology",
-      "postTime": "2023-11-20T14:00:00Z",
-      "upVoteCount": 250,
-      "downVoteCount": 30
-    },
-    {
-      "authorImage": "https://i.ibb.co/xmwQQCb/360-F-246344306-E4-KQf8mvv-Ws-CAwr-SMEEY6-GUOa22-Tji-Un.jpg",
-      "authorName": "Sophie Davis",
-      "postTitle": "Travel Diaries: Adventures Across Continents",
-      "postDescription": "Documenting my travels and the incredible experiences along the way.",
-      "tag": "travel",
-      "postTime": "2023-11-19T20:30:00Z",
-      "upVoteCount": 300,
-      "downVoteCount": 25
-    },
-    {
-      "authorImage": "https://i.ibb.co/zH8dfJm/istockphoto-1364917563-612x612.jpg",
-      "authorName": "Robert Miller",
-      "postTitle": "Coding Chronicles: A Programmer's Journey",
-      "postDescription": "From novice to expert, the evolution of a programmer's skills.",
-      "tag": "photography",
-      "postTime": "2023-11-18T11:45:00Z",
-      "upVoteCount": 200,
-      "downVoteCount": 12
-    },
-    {
-      "authorImage": "https://i.ibb.co/v4vxY06/360-F-166138880-Xz-Aj-Ag-Daz4eal-RZDuyqj-DPuhtv-Rx-OQcm.jpg",
-      "authorName": "Hannah White",
-      "postTitle": "Artistic Expressions: Painting Beyond Boundaries",
-      "postDescription": "Breaking free from artistic constraints and embracing creativity.",
-      "tag": "travel",
-      "postTime": "2023-11-17T17:00:00Z",
-      "upVoteCount": 150,
-      "downVoteCount": 8
-    },
-    {
-      "authorImage": "https://i.ibb.co/C5nZ0ff/360-F-279902034-k-Bj-KUJv-C8y19-Adk-EJ3-L3emqx-Vq-Y5-K7-Cv.jpg",
-      "authorName": "David Turner",
-      "postTitle": "Science Unraveled: Exploring the Wonders of the Universe",
-      "postDescription": "Diving into the mysteries of science and the universe.",
-      "tag": "fitness",
-      "postTime": "2023-11-16T13:20:00Z",
-      "upVoteCount": 220,
-      "downVoteCount": 18
-    },
-    {
-      "authorImage": "https://i.ibb.co/H23mDWy/1000-F-205683333-4a-Um6p-G7-Lk-Z4sr-Yo-LXP5-RJIInd7-ZEUA8.jpg",
-      "authorName": "Lily Martinez",
-      "postTitle": "Fashion Forward: Trends and Style Tips",
-      "postDescription": "Navigating the ever-changing world of fashion with style and confidence.",
-      "tag": "fitness",
-      "postTime": "2023-11-15T19:30:00Z",
-      "upVoteCount": 180,
-      "downVoteCount": 22
-    },
-    {
-      "authorImage": "https://i.ibb.co/NLJzWZD/360-F-322533850-Lz5-JL2-K0n-Vq-L48gj-Ci-RLSa2ssxpdfyer.jpg",
-      "authorName": "Samuel Taylor",
-      "postTitle": "Gaming Galore: A Gamer's Paradise",
-      "postDescription": "From classic favorites to the latest releases, a journey through the gaming world.",
-      "tag": "travel",
-      "postTime": "2023-11-14T10:10:00Z",
-      "upVoteCount": 280,
-      "downVoteCount": 15
-    },
-    {
-      "authorImage": "https://i.ibb.co/XpRRp8y/istockphoto-1322517295-612x612.jpg",
-      "authorName": "Olivia Adams",
-      "postTitle": "Mindful Living: Embracing a Balanced Lifestyle",
-      "postDescription": "Tips on incorporating mindfulness into daily life for a healthier and happier you.",
-      "tag": "technology",
-      "postTime": "2023-11-13T14:45:00Z",
-      "upVoteCount": 210,
-      "downVoteCount": 10
-    }
-  ]
-  
+  {
+    "authorImage": "https://i.ibb.co/6DNhM3H/360-F-305776453-t7-SUl48g63z-Lsy-ODxd60aj6-Ec-WR9av-VK.jpg",
+    "authorName": "John Doe",
+    "postTitle": "Exploring the wonders of JSON",
+    "postDescription": "A deep dive into the world of JSON and its applications.",
+    "tag": "technology",
+    "postTime": "2023-11-24T12:30:00Z",
+    "upVoteCount": 150,
+    "downVoteCount": 20,
+    "email": "john.doe@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/6JD2gqP/successful-businesswoman-positive-lady-smiling-260nw-1524541301.webp",
+    "authorName": "Jane Smith",
+    "postTitle": "Cooking Adventures: A Culinary Journey",
+    "postDescription": "Sharing my experiences and recipes from around the globe.",
+    "tag": "food",
+    "postTime": "2023-11-23T18:45:00Z",
+    "upVoteCount": 230,
+    "downVoteCount": 15,
+    "email": "jane.smith@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/3zTGWfN/360-F-285983167-OTSj-TSe-Rhq-J7b4-TPxl-Q80m-C9z-Ti-DCz-MQ.jpg",
+    "authorName": "Alex Johnson",
+    "postTitle": "The Art of Photography",
+    "postDescription": "Capturing moments through the lens and telling stories in every frame.",
+    "tag": "photography",
+    "postTime": "2023-11-22T09:15:00Z",
+    "upVoteCount": 120,
+    "downVoteCount": 5,
+    "email": "alex.johnson@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/z4mzyB5/360-F-425659755-5-Ba-Ld-Nbb-Ct-Qbbiz1-JNFBikshfi-CWI5-NE.jpg",
+    "authorName": "Emily Wilson",
+    "postTitle": "Discovering Hidden Gems in Literature",
+    "postDescription": "Unveiling the beauty of lesser-known literary masterpieces.",
+    "tag": "food",
+    "postTime": "2023-11-21T15:20:00Z",
+    "upVoteCount": 180,
+    "downVoteCount": 10,
+    "email": "emily.wilson@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/bd1Nbqd/360-F-200902415-G4e-Z9-Ok3-Ypd4-SZZKjc8nq-Jy-FVp1e-OD6-V.jpg",
+    "authorName": "Michael Brown",
+    "postTitle": "Fitness for a Healthy Lifestyle",
+    "postDescription": "Tips, tricks, and motivation for maintaining a fit and healthy life.",
+    "tag": "technology",
+    "postTime": "2023-11-20T14:00:00Z",
+    "upVoteCount": 250,
+    "downVoteCount": 30,
+    "email": "michael.brown@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/xmwQQCb/360-F-246344306-E4-KQf8mvv-Ws-CAwr-SMEEY6-GUOa22-Tji-Un.jpg",
+    "authorName": "Sophie Davis",
+    "postTitle": "Travel Diaries: Adventures Across Continents",
+    "postDescription": "Documenting my travels and the incredible experiences along the way.",
+    "tag": "travel",
+    "postTime": "2023-11-19T20:30:00Z",
+    "upVoteCount": 300,
+    "downVoteCount": 25,
+    "email": "sophie.davis@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/zH8dfJm/istockphoto-1364917563-612x612.jpg",
+    "authorName": "Robert Miller",
+    "postTitle": "Coding Chronicles: A Programmer's Journey",
+    "postDescription": "From novice to expert, the evolution of a programmer's skills.",
+    "tag": "photography",
+    "postTime": "2023-11-18T11:45:00Z",
+    "upVoteCount": 200,
+    "downVoteCount": 12,
+    "email": "robert.miller@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/v4vxY06/360-F-166138880-Xz-Aj-Ag-Daz4eal-RZDuyqj-DPuhtv-Rx-OQcm.jpg",
+    "authorName": "Hannah White",
+    "postTitle": "Artistic Expressions: Painting Beyond Boundaries",
+    "postDescription": "Breaking free from artistic constraints and embracing creativity.",
+    "tag": "travel",
+    "postTime": "2023-11-17T17:00:00Z",
+    "upVoteCount": 150,
+    "downVoteCount": 8,
+    "email": "hannah.white@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/C5nZ0ff/360-F-279902034-k-Bj-KUJv-C8y19-Adk-EJ3-L3emqx-Vq-Y5-K7-Cv.jpg",
+    "authorName": "David Turner",
+    "postTitle": "Science Unraveled: Exploring the Wonders of the Universe",
+    "postDescription": "Diving into the mysteries of science and the universe.",
+    "tag": "fitness",
+    "postTime": "2023-11-16T13:20:00Z",
+    "upVoteCount": 220,
+    "downVoteCount": 18,
+    "email": "david.turner@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/H23mDWy/1000-F-205683333-4a-Um6p-G7-Lk-Z4sr-Yo-LXP5-RJIInd7-ZEUA8.jpg",
+    "authorName": "Lily Martinez",
+    "postTitle": "Fashion Forward: Trends and Style Tips",
+    "postDescription": "Navigating the ever-changing world of fashion with style and confidence.",
+    "tag": "fitness",
+    "postTime": "2023-11-15T19:30:00Z",
+    "upVoteCount": 180,
+    "downVoteCount": 22,
+    "email": "lily.martinez@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/NLJzWZD/360-F-322533850-Lz5-JL2-K0n-Vq-L48gj-Ci-RLSa2ssxpdfyer.jpg",
+    "authorName": "Samuel Taylor",
+    "postTitle": "Gaming Galore: A Gamer's Paradise",
+    "postDescription": "From classic favorites to the latest releases, a journey through the gaming world.",
+    "tag": "travel",
+    "postTime": "2023-11-14T10:10:00Z",
+    "upVoteCount": 280,
+    "downVoteCount": 15,
+    "email": "samuel.taylor@example.com"
+  },
+  {
+    "authorImage": "https://i.ibb.co/XpRRp8y/istockphoto-1322517295-612x612.jpg",
+    "authorName": "Olivia Adams",
+    "postTitle": "Mindful Living: Embracing a Balanced Lifestyle",
+    "postDescription": "Tips on incorporating mindfulness into daily life for a healthier and happier you.",
+    "tag": "technology",
+    "postTime": "2023-11-13T14:45:00Z",
+    "upVoteCount": 210,
+    "downVoteCount": 10,
+    "email": "olivia.adams@example.com"
+  }
+]

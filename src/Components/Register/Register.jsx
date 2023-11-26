@@ -19,6 +19,30 @@ const handleGoogle = () =>{
     .then(result => {
       navigate(location?.state ? location.state : "/");
          console.log(result.user)
+         const name = result.user.displayName;
+         const photo = result.user.photoURL;
+         const email = result.user.email;
+         const newUser = {email,photo,name,Badge : "Bronze"}
+         console.log(newUser); 
+         fetch('http://localhost:5000/users',{
+          method:"POST",
+          headers: {
+              "content-type":"application/json"
+          },
+          body: JSON.stringify(newUser)
+      })
+      .then(res => res.json())
+      .then(data => {
+          console.log(data)
+          if(data.acknowledged)
+          {
+              Swal.fire(
+                  'success',
+                  'Successfully added your account',
+                  'success'
+                )
+          }
+      })
          Swal.fire(
               'success',
               'Successfully added your account',
@@ -76,6 +100,29 @@ const handleGoogle = () =>{
         console.log(error.message)
         setErrorMsg(error.message)
        } )
+
+       const newUser = {name,email,photo,Badge : "Bronze"};
+
+       fetch('http://localhost:5000/users',{
+        method:"POST",
+        headers: {
+            "content-type":"application/json"
+        },
+        body: JSON.stringify(newUser)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        if(data.acknowledged)
+        {
+            Swal.fire(
+                'success',
+                'Successfully added your account',
+                'success'
+              )
+        }
+        form.reset();
+    })
     
          
     }
