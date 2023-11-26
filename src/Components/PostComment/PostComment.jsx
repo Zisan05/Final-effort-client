@@ -34,9 +34,9 @@ const PostComment = () => {
          
     
     return (
-        <div className="bg-gray-600">
+        <div className="bg-orange-400">
             <h1 className="text-[40px] text-center text-violet-800 font-bold underline ">Comments of this post</h1>
-            <div className="overflow-x-auto h-[500px] ">
+            <div className="overflow-x-auto h-[900px] ">
   <table className="table">
     {/* head */}
     <thead>
@@ -51,7 +51,7 @@ const PostComment = () => {
     <tbody>
       {/* row 1 */}
       {
-        save.map((item,index) => <tr className="text-purple-200" key = {item._id}>
+        save.map((item,index) => <tr className="text-black" key = {item._id}>
             <th>{index+1}</th>
             <td>{item.email}</td>
             <td>{item.comment}</td>

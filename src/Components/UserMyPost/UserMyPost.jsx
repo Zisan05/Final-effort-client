@@ -1,17 +1,67 @@
 import { Link, useLoaderData } from "react-router-dom";
-import { useContext } from "react";
+import { useContext,useState,useEffect } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import Swal from "sweetalert2";
 
 const UserMyPost = () => {
     const postData = useLoaderData();
+
     
 
+  
+    
     const {user} = useContext(AuthContext);
          
-     const filterData = postData.filter(item => item.email === user.email)
+     
+
+     
+     const [newpost,setNewpost] = useState([]);
+    //  setNewpost(filterData);
+     
+     useEffect( () => {
+      const filterData = postData.filter(item => item.email === user.email);
+      setNewpost(filterData);
+     } ,[postData,user.email])
+
+     
+
+     const handleDelete = id => {
+
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`http://localhost:5000/posts/${id}`,{
+          method: 'DELETE'
+      })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        if(data.deletedCount > 0){
+          const remainingData = newpost.filter(item => item._id !== id)
+          setNewpost(remainingData);
+          Swal.fire({
+            title: "Deleted!",
+            text: "Your Post has been deleted.",
+            icon: "success"
+          });
+        }
+     })     
+        }
+      });
+      
+        
+         
+     }
 
     return (
-        <div className="bg-gray-500 h-[500px]">
+        <div className="bg-orange-400 h-[500px]">
             <h1 className="text-[40px] text-center text-violet-800 font-bold underline ">My post</h1>
             <div>
                 
@@ -32,7 +82,7 @@ const UserMyPost = () => {
     <tbody>
       {/* row 1 */}
       {
-            filterData.map(data => <tr className="text-white" key={data._id}>
+            newpost.map(data => <tr className="text-white" key={data._id}>
       
       
         <th>1</th>
@@ -42,7 +92,7 @@ const UserMyPost = () => {
         <td>{data.downVoteCount}</td>
         <Link to={`postcomment/${data.postTitle}`}>
         <td><button className="btn bg-purple-800 text-white">Comment</button></td></Link>
-        <td><button className="btn bg-purple-800 text-white">Delete</button></td>
+        <td><button onClick={() => handleDelete(data._id)} className="btn bg-purple-800 text-white">Delete</button></td>
       </tr>
       )}
     </tbody>

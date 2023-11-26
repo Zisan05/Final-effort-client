@@ -18,6 +18,15 @@ import UserProfile from './Components/UserProfile/UserProfile';
 import UserAddPost from './Components/UserAddPost/UserAddPost';
 import UserMyPost from './Components/UserMyPost/UserMyPost';
 import PostComment from './Components/PostComment/PostComment';
+import AdminProfile from './Components/Admin/AdminProfile';
+import ManageUser from './Components/Admin/ManageUser';
+
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import MakeAnnoucement from './Components/Admin/MakeAnnoucement';
+const queryClient = new QueryClient();
 
 
 const router = createBrowserRouter([
@@ -49,7 +58,9 @@ const router = createBrowserRouter([
   {
     path: 'dashboard',
     element: <DashBoard></DashBoard>,
+    loader: () => fetch('http://localhost:5000/users'),
     children: [
+      // user Route
       {
         path: "userprofile",
         element:<UserProfile></UserProfile>,
@@ -69,7 +80,22 @@ const router = createBrowserRouter([
         element: <PostComment></PostComment>,
         loader: () => fetch('http://localhost:5000/comments')
     
-      }
+      },
+      // admin route
+       {
+        path: "adminprofile",
+        element: <AdminProfile></AdminProfile>,
+        loader: () => fetch('http://localhost:5000/users')
+       },
+       {
+        path: "manageuser",
+        element: <ManageUser></ManageUser>,
+        loader: () => fetch('http://localhost:5000/users')
+       },
+       {
+        path: 'annoucement',
+        element: <MakeAnnoucement></MakeAnnoucement>
+       } 
       
     ]
   }
@@ -79,6 +105,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <AuthProvider><RouterProvider router={router} /></AuthProvider>
+     <AuthProvider>
+     <QueryClientProvider client={queryClient}>
+     <RouterProvider router={router} />
+    </QueryClientProvider>
+     </AuthProvider>
   </React.StrictMode>,
 )

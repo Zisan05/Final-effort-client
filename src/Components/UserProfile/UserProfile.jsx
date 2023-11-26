@@ -18,7 +18,7 @@ const UserProfile = () => {
          
 
     return (
-        <div className="bg-gray-400 h-[700px] lg:w-[900px]">
+        <div className="bg-orange-400 h-[700px] lg:w-[900px]">
             <h1 className="text-[40px] text-center text-violet-800 font-bold underline ">User profle</h1>
 
             <div>
