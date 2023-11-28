@@ -22,9 +22,9 @@ const handleGoogle = () =>{
          const name = result.user.displayName;
          const photo = result.user.photoURL;
          const email = result.user.email;
-         const newUser = {email,photo,name,Badge : "Bronze"}
+         const newUser = {email,photo,name,Badge : "Bronze",role : 'user'}
          console.log(newUser); 
-         fetch('http://localhost:5000/users',{
+         fetch('https://final-effort-server-puce.vercel.app/users',{
           method:"POST",
           headers: {
               "content-type":"application/json"
@@ -101,9 +101,9 @@ const handleGoogle = () =>{
         setErrorMsg(error.message)
        } )
 
-       const newUser = {name,email,photo,Badge : "Bronze"};
+       const newUser = {name,email,photo,Badge : "Bronze", role : 'user'};
 
-       fetch('http://localhost:5000/users',{
+       fetch('https://final-effort-server-puce.vercel.app/users',{
         method:"POST",
         headers: {
             "content-type":"application/json"

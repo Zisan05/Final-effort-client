@@ -11,7 +11,7 @@ const Posts = () => {
     const [currentPage,setcurrentPage] = useState(0); 
 
     useEffect(() => {
-        fetch('http://localhost:5000/postsCount')
+        fetch('https://final-effort-server-puce.vercel.app/postsCount')
         .then(res => res.json())
         .then(data => {
          settotalData(data.count);
@@ -24,7 +24,7 @@ const Posts = () => {
    for(let i = 0; i<numberOfPage;i++){
      pages.push(i)
    }
-   console.log(pages);
+  
 
 
     //   other things
@@ -32,18 +32,15 @@ const Posts = () => {
     const [asc,setAsc] = useState(true);  
 
 useEffect( () => {
-    fetch(`http://localhost:5000/posts?page=${currentPage}&size=${itemPerPage}&sort=${asc ? 'asc' : 'dsc'}`)
+    fetch(`https://final-effort-server-puce.vercel.app/posts?page=${currentPage}&size=${itemPerPage}&sort=${asc ? 'asc' : 'dsc'}`)
     .then(res => res.json())
     .then(data => {
         setpostData(data);
     })
 },[asc,currentPage,itemPerPage]);
 
-console.log(postData);
 
 
-
-    
     return (
         <div>
             <h1 className='text-[48px] underline text-fuchsia-300 font-bold text-center'>All Posts</h1>
@@ -51,7 +48,7 @@ console.log(postData);
                 asc ? 'High Popularity' : 'Low Popularity'
             }
             </button> </h1>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px] md:ml-[60px] lg:ml-[150px]'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[15px] md:ml-[60px] lg:ml-[150px] mt-[60px]'>
             {
                 postData.map(item => <div key={item._id} className="card w-[300px] bg-lime-300 shadow-xl">
                 <figure><img className='w-full h-[250px]' src={item.authorImage} alt="Shoes" /></figure>

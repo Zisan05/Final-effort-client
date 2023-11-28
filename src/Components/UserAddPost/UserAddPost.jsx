@@ -1,7 +1,29 @@
 import Swal from "sweetalert2";
+import { Link, useLoaderData } from "react-router-dom";
+import { useContext,useState,useEffect } from "react";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 
 const UserAddPost = () => {
+
+  const postData = useLoaderData();
+
+ 
+    const {user} = useContext(AuthContext);
+         
+     
+
+     
+     const [newpost,setNewpost] = useState([]);
+    
+     
+     useEffect( () => {
+      const filterData = postData.filter(item => item.email === user.email);
+      setNewpost(filterData);
+     } ,[postData,user.email])
+
+     console.log(newpost);
 
 const handlAddPost  = e => {
     e.preventDefault()
@@ -20,7 +42,7 @@ const handlAddPost  = e => {
      
     const newPost = {authorName,email,authorImage,postTitle,postDescription,tag,postTime,upVoteCount,downVoteCount}
             
-    fetch('http://localhost:5000/posts',{
+    fetch('https://final-effort-server-puce.vercel.app/posts',{
         method:"POST",
         headers: {
             "content-type":"application/json"
@@ -36,7 +58,7 @@ const handlAddPost  = e => {
                 'success',
                 'Successfully added your Post',
                 'success'
-              )
+            )
         }
         form.reset();
     })
@@ -44,79 +66,87 @@ const handlAddPost  = e => {
 
     return (
         <div className="bg-gray-600">
-            <h1 className="text-[40px] text-center text-violet-800 font-bold underline ">Add Post</h1>
+            {
+              newpost.length > 3 ? <div className="h-[400px]">
+                <h1 className="text-[40px] text-center text-violet-800 font-bold underline">For Adding more post you need to become our golden member..For membership click the member button become our member</h1>
+                <Link to = {'/member'}><button className="btn bg-purple-500 ml-[45%] mt-[50px]">Member</button></Link>
+              </div>  : <div>
+                <h1 className="text-[40px] text-center text-violet-800 font-bold underline ">Add Post</h1>
 
-            <div>
-            <div className="hero min-h-screen ">
-  <div className="hero-content flex-col ">
-    <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold text-orange-400">Add A Post!</h1>
-    </div>
-    <div className="card w-full  shadow-2xl bg-lime-400">
-      <form onSubmit={handlAddPost} className="card-body w-[500px] mb-[250px] h-[720px] ">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text"> Author Name
-</span>
-          </label>
-          <input type="text" name="name" placeholder="name" className="input input-bordered" required />
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Author Image</span>
-          </label>
-          <input type="text" name="photo" placeholder="Image" className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text"> Author Email</span>
-          </label>
-          <input type="email" name="email" placeholder="email" className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Post Title</span>
-          </label>
-          <input type="text" name="title" placeholder="Post Title" className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Post Description</span>
-          </label>
-          <input type="text" name="Description" placeholder="Post Description" className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Tag</span>
-          </label>
-          <input type="text" name="tag" placeholder="Tag" className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">PostTime</span>
-          </label>
-          <input type="text" name="postTime" placeholder="postTime" className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">upVote</span>
-          </label>
-          <input type="text" name="upVoteCount" value={0} className="input input-bordered"/>
-        </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">DownVote</span>
-          </label>
-          <input type="text" name="downVoteCount" value={0} className="input input-bordered"/>
-        </div>
-        <div className="form-control mt-6">
-          <button className="btn bg-orange-400">Post</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<div>
+<div className="hero min-h-screen ">
+<div className="hero-content flex-col ">
+<div className="text-center lg:text-left">
+<h1 className="text-5xl font-bold text-orange-400">Add A Post!</h1>
 </div>
-            </div>
+<div className="card w-full  shadow-2xl bg-lime-400">
+<form onSubmit={handlAddPost} className="card-body w-[500px] mb-[250px] h-[720px] ">
+<div className="form-control">
+<label className="label">
+<span className="label-text"> Author Name
+</span>
+</label>
+<input type="text" name="name" placeholder="name" className="input input-bordered" required />
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">Author Image</span>
+</label>
+<input type="text" name="photo" placeholder="Image" className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text"> Author Email</span>
+</label>
+<input type="email" name="email" placeholder="email" className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">Post Title</span>
+</label>
+<input type="text" name="title" placeholder="Post Title" className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">Post Description</span>
+</label>
+<input type="text" name="Description" placeholder="Post Description" className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">Tag</span>
+</label>
+<input type="text" name="tag" placeholder="Tag" className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">PostTime</span>
+</label>
+<input type="text" name="postTime" placeholder="postTime" className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">upVote</span>
+</label>
+<input type="text" name="upVoteCount" value={0} className="input input-bordered"/>
+</div>
+<div className="form-control">
+<label className="label">
+<span className="label-text">DownVote</span>
+</label>
+<input type="text" name="downVoteCount" value={0} className="input input-bordered"/>
+</div>
+<div className="form-control mt-6">
+<button className="btn bg-orange-400">Post</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+              </div>
+            }
+            
         </div>
     );
 };

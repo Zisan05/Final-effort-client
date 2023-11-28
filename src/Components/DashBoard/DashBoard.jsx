@@ -3,6 +3,7 @@ import { ImProfile } from "react-icons/im";
 import { MdOutlinePostAdd } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { MdManageAccounts } from "react-icons/md";
+import { MdAnnouncement } from "react-icons/md";
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
@@ -43,7 +44,7 @@ const DashBoard = () => {
                     <NavLink className=" py-[15px]" to ={"/dashboard/manageuser"}> <MdManageAccounts></MdManageAccounts>Manage User</NavLink></li>
                     <li className="py-[15px]">
                     
-                    <NavLink className=" py-[15px]" to ={"/dashboard/annoucement"}> <MdManageAccounts></MdManageAccounts>Make announcement</NavLink></li>
+                    <NavLink className=" py-[15px]" to ={"/dashboard/annoucement"}> <MdAnnouncement></MdAnnouncement>Make announcement</NavLink></li>
 
                 <li className="py-[15px]">
                     

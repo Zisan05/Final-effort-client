@@ -1,14 +1,22 @@
 import { NavLink,Link } from "react-router-dom";
 import { IoNotifications } from "react-icons/io5";
 import Swal from "sweetalert2";
-import { useContext } from "react";
+import { useContext,useState,useEffect } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navbar = () => {
 
   const {LogoutUser,user} = useContext(AuthContext);
 
+  const [annData,setannData] = useState([]);
+
+  useEffect( () => {
+      fetch('https://final-effort-server-puce.vercel.app/announces')
+      .then(res => res.json())
+      .then(data => setannData(data))
+  } ,[])
   
+  console.log(annData.length);
 
 
   const handleLogout = () =>{
@@ -30,7 +38,7 @@ const Navbar = () => {
 
     const navItem = <ul className="lg:flex gap-[10px]">
       <li><NavLink to="/">Home</NavLink></li>
-      <li><NavLink to="/">Membership</NavLink></li>
+      <li><NavLink to="/member">Membership</NavLink></li>
     </ul>
   
     return (
@@ -53,9 +61,15 @@ const Navbar = () => {
             {navItem}
     </ul>
   </div>
+  
   <div className="navbar-end">
-    <IoNotifications className="text-[25px] mr-[30px]"></IoNotifications>
+    <div className="">
+    <p className="text-[15px] relative left-[10px] top-[5px] font-bold text-indigo-600">+{annData.length}</p>
+    <IoNotifications className="text-[25px] mr-[50px] text-fuchsia-600"></IoNotifications>
+    
+    </div>
     <div>
+    
         {
           user ? <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

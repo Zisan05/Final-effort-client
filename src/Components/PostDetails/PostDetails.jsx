@@ -2,6 +2,7 @@ import { useState,useContext } from "react";
 import { BiSolidDownvote, BiUpvote } from "react-icons/bi";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import {FacebookShareButton} from 'react-share'
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const PostDetails = () => {
@@ -23,7 +24,7 @@ const PostDetails = () => {
         
         console.log(updateData);
         
-        fetch(`http://localhost:5000/posts/${_id}`,{
+        fetch(`https://final-effort-server-puce.vercel.app/posts/${_id}`,{
             method: 'PUT',
             headers: {
                 "content-type":"application/json"
@@ -52,7 +53,7 @@ const PostDetails = () => {
         const createData = {comment: comment,email: user?.email,postTitle: postTitle}
         console.log(createData);
 
-        fetch('http://localhost:5000/comments',{
+        fetch('https://final-effort-server-puce.vercel.app/comments',{
             method:"POST",
             headers: {
                 "content-type":"application/json"
@@ -89,8 +90,9 @@ const PostDetails = () => {
   <h2 onClick={() => setdownVote(downvote+1)} className="card-title font-bold text-blue-400"><span className='text-black flex items-center'>Vote<BiSolidDownvote  className='text-[25px]'></BiSolidDownvote>:</span> {downvote}</h2>
     <div className="card-actions">
       <button onClick={handleUpdate} className="btn btn-primary">Update Vote</button>
-      
-      <button className="btn">Share Post</button>
+      <FacebookShareButton url={`https://final-effort-server-puce.vercel.app/posts/${_id}`} title={postTitle}>
+      <button className="btn bg-rose-500">Share Post</button>
+      </FacebookShareButton>
     </div>
     <div>
        <form  onSubmit={handleComment} action="">

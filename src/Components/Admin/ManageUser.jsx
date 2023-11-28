@@ -12,7 +12,7 @@ const ManageUser = () => {
         queryKey: ['users'],
         queryFn: async () => {
           try {
-            const response = await fetch('http://localhost:5000/users');
+            const response = await fetch('https://final-effort-server-puce.vercel.app/users');
             
             if (!response.ok) {
               throw new Error(`HTTP error! Status: ${response.status}`);
@@ -31,7 +31,7 @@ const ManageUser = () => {
             console.log(id,role);
             const updateData = {role};
             
-            fetch(`http://localhost:5000/users/${id}`,{
+            fetch(`https://final-effort-server-puce.vercel.app/users/${id}`,{
             method: 'PUT',
             headers: {
                 "content-type":"application/json"

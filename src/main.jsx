@@ -26,6 +26,8 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import MakeAnnoucement from './Components/Admin/MakeAnnoucement';
+import Privet from './Components/Privet/Privet';
+import MakeMember from './Components/MakeMember/MakeMember';
 const queryClient = new QueryClient();
 
 
@@ -40,6 +42,10 @@ const router = createBrowserRouter([
         element:<Home></Home>
       },
       {
+        path: '/member',
+        element: <Privet><MakeMember></MakeMember> </Privet>  
+      },
+      {
         path:"/login",
         element:<Login></Login>
       },
@@ -49,48 +55,49 @@ const router = createBrowserRouter([
       },
       {
         path:"/details/:_id",
-        element:<PostDetails></PostDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/posts/${params._id}`)
+        element:<Privet><PostDetails></PostDetails></Privet>,
+        loader: ({ params }) => fetch(`https://final-effort-server-puce.vercel.app/posts/${params._id}`)
       }
       
     ]
   },
   {
     path: 'dashboard',
-    element: <DashBoard></DashBoard>,
-    loader: () => fetch('http://localhost:5000/users'),
+    element: <Privet><DashBoard></DashBoard></Privet>,
+    loader: () => fetch('https://final-effort-server-puce.vercel.app/users'),
     children: [
       // user Route
       {
         path: "userprofile",
         element:<UserProfile></UserProfile>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://final-effort-server-puce.vercel.app/users')
       },
       {
         path: 'useraddpost',
-        element: <UserAddPost></UserAddPost>
+        element: <UserAddPost></UserAddPost>,
+        loader: () => fetch('https://final-effort-server-puce.vercel.app/posts')
       },
       {
         path: "usermypost",
         element: <UserMyPost></UserMyPost>,
-        loader: () => fetch('http://localhost:5000/posts')
+        loader: () => fetch('https://final-effort-server-puce.vercel.app/posts')
       },
       {
         path: 'usermypost/postcomment/:postTitle',
         element: <PostComment></PostComment>,
-        loader: () => fetch('http://localhost:5000/comments')
+        loader: () => fetch('https://final-effort-server-puce.vercel.app/comments')
     
       },
       // admin route
        {
         path: "adminprofile",
         element: <AdminProfile></AdminProfile>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://final-effort-server-puce.vercel.app/users')
        },
        {
         path: "manageuser",
         element: <ManageUser></ManageUser>,
-        loader: () => fetch('http://localhost:5000/users')
+        loader: () => fetch('https://final-effort-server-puce.vercel.app/users')
        },
        {
         path: 'annoucement',

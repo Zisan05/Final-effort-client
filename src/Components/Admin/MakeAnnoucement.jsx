@@ -12,7 +12,7 @@ const MakeAnnoucement = () => {
 
     const newPost = {authorName,authorImage,Title,Description,}
 
-    fetch('http://localhost:5000/announces',{
+    fetch('https://final-effort-server-puce.vercel.app/announces',{
         method:"POST",
         headers: {
             "content-type":"application/json"

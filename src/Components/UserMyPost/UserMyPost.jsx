@@ -16,12 +16,14 @@ const UserMyPost = () => {
 
      
      const [newpost,setNewpost] = useState([]);
-    //  setNewpost(filterData);
+    
      
      useEffect( () => {
       const filterData = postData.filter(item => item.email === user.email);
       setNewpost(filterData);
      } ,[postData,user.email])
+
+    
 
      
 
@@ -37,7 +39,7 @@ const UserMyPost = () => {
         confirmButtonText: "Yes, delete it!"
       }).then((result) => {
         if (result.isConfirmed) {
-          fetch(`http://localhost:5000/posts/${id}`,{
+          fetch(`https://final-effort-server-puce.vercel.app/posts/${id}`,{
           method: 'DELETE'
       })
       .then(res => res.json())
@@ -69,7 +71,7 @@ const UserMyPost = () => {
   <table className="table">
     {/* head */}
     <thead>
-      <tr className="text-white">
+      <tr className="text-white font-bold text-[20px]">
       <th>#</th>
         <th> Post Title</th>
         <th>Tag</th>
@@ -82,7 +84,7 @@ const UserMyPost = () => {
     <tbody>
       {/* row 1 */}
       {
-            newpost.map(data => <tr className="text-white" key={data._id}>
+            newpost.map(data => <tr className="text-lime-200 text-[20px] font-bold " key={data._id}>
       
       
         <th>1</th>
